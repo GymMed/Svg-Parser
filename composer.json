@@ -3,6 +3,7 @@
     "description": "Includes css document styles to svg without editing original svg document.",
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Gymmed\\SvgParser\\": "src/"
