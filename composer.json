@@ -1,6 +1,15 @@
 {
     "name": "gymmed/svg-parser",
     "description": "Includes css document styles to svg without editing original svg document.",
+    "keywords": [
+        "gymmed",
+        "svg-parser-php",
+        "svg-parser",
+        "css-svg",
+        "svg",
+        "php"
+    ],
+    "homepage": "https://github.com/GymMed/Svg-Parser-PHP",
     "type": "library",
     "license": "MIT",
     "minimum-stability": "dev",
@@ -12,7 +21,8 @@
     "authors": [
         {
             "name": "Gytis",
-            "email": "medelis.gytis@gmail.com"
+            "email": "medelis.gytis@gmail.com",
+            "role": "Developer"
         }
     ],
     "require": {}
