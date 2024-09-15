@@ -6,11 +6,16 @@ class SvgParser
 {
     public function __construct() {}
 
-    public static function formatSvg(string $svgPath, array $cssDocuments): \Exception | string
+    public static function formatSvgFromPath(string $svgPath, array $cssDocuments): \Exception | string
     {
         self::checkDocument($svgPath);
         $svg = file_get_contents($svgPath);
 
+        return self::formatSvg($svg, $cssDocuments);
+    }
+
+    public static function formatSvg(string $svg, array $cssDocuments): \Exception | string
+    {
         foreach ($cssDocuments as $cssDocument) {
             self::checkDocument($cssDocument);
             $css = file_get_contents($cssDocument);

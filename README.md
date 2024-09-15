@@ -36,7 +36,20 @@ use GymMed\SvgParser;
 $svgPath = realpath(__DIR__ . "./assets/example.svg");
 $cssPath = realpath(__DIR__ . "./assets/css/index.css");
 
-$svgWithCSS = SvgParser::formatSvg($svgPath, [$cssPath]);
+$svgWithCSS = SvgParser::formatSvgFromPath($svgPath, [$cssPath]);
+```
+
+or use SVG content:
+
+```php
+use GymMed\SvgParser;
+
+//provide full path
+$svgPath = realpath(__DIR__ . "./assets/example.svg");
+$cssPath = realpath(__DIR__ . "./assets/css/index.css");
+$svg = file_get_contents($svgPath);
+
+$svgWithCSS = SvgParser::formatSvg($svg, [$cssPath]);
 ```
 
 If you want to write simple CSS and apply it inside SVG:
